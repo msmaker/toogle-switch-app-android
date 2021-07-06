@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.ToggleButton;
@@ -25,6 +26,22 @@ public class MainActivity extends AppCompatActivity {
         toggleSenha = findViewById(R.id.toggleSenha);
         textResultado = findViewById(R.id.textResultado);
         checkBoxSenha = findViewById(R.id.checkBoxSenha);
+
+        adcionarListener();
+    }
+
+    public void adcionarListener() {
+        switchSenha.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                    textResultado.setText("ligado");
+                } else {
+                    textResultado.setText("desligado");
+                }
+
+            }
+        });
     }
 
     public void enviar(View view) {
