@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void adcionarListener() {
-        toggleSenha.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+        checkBoxSenha.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked) {
